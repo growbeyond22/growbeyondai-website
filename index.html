@@ -11,43 +11,52 @@
 </head>
 <body>
 
-    <header class="header">
-        <nav class="navbar container">
-            <a href="#" class="logo">
-              GrowBeyondAI 
-              <img src="images/growbeyondai_logo.png" alt="GrowBeyondAI Logo" style="height: 75px;">
-            </a>
-            <div class="nav-links" id="navLinks">
-                <a href="#about">About</a>
-                <a href="#pillars">Foundations</a>
-                <a href="#approach">Approach</a>
-                <a href="#testimonials">Stories</a>
-                <a href="#contact">Contact</a>
-            </div>
-            <a href="#" class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></a>
-        </nav>
-    </header>
-
-    <section class="hero-banner section-padding">
-        <div class="container hero-content">
-            <p class="hero-vision">Raising the next generation—digitally wise, deeply rooted, and ready to shine.</p>
-            <h1>Prompted to Inspire. Built to Reflect.</h1>
-            <p>We're here to spark curiosity, creativity, and Christ-centered thinking in the next generation.</p>
-            <a href="#contact" class="cta-button">Get Started Today <i class="fa-solid fa-arrow-right"></i></a>
+   <header class="header">
+    <nav class="navbar container">
+        <a href="#" class="logo">
+            <img src="images/growbeyondai_logo.png" alt="GrowBeyondAI Logo" style="height: 60px; vertical-align: middle; margin-right: 10px;">
+            <span class="logo-text">GrowBeyondAI</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#about">About</a>
+            <a href="#pillars">Foundations</a>
+            <a href="#approach">Approach</a>
+            <a href="#testimonials">Stories</a>
+            <a href="#contact">Contact</a>
         </div>
-    </section>
+        <a href="#" class="hamburger" id="hamburger"><i class="fa-solid fa-bars"></i></a>
+    </nav>
+</header>
+
+<section class="hero-banner-alt">
+    <div class="container hero-content-alt">
+        <div class="hero-text-block">
+            <h1 class="hero-title-alt">Prompted to Inspire.<br>Built to Reflect.</h1>
+            <h2 class="hero-subheading">Raising tomorrow’s leaders to harness technology with wisdom, design with creativity, and walk in steadfast faith</h2>
+            <a href="#contact" class="cta-button-alt">Get Started Today <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+        <div class="hero-image-block">
+            <img src="images/growbeyondai_logo.png" alt="GrowBeyondAI Logo" class="hero-logo-large">
+        </div>
+    </div>
+</section>
 
     <section id="about" class="content-section about-section section-padding">
         <div class="container">
-            <h2 class="section-heading">Who We Are</h2>
-            <p class="lead-verse">“He is like a tree planted beside flowing streams that bears its fruit in its season and whose leaf does not wither.” – Psalm 1:3 CSB</p>
-            <p class="mission-statement"><strong>Mission:</strong> GrowBeyondAI exists to equip children and families to engage technology and AI with biblical wisdom, creative purpose, and a heart for discipleship.</p>
-            <p class="vision-statement"><strong>Vision:</strong> Raising the next generation of Christ-followers—digitally wise, deeply rooted, and ready to shine.</p>
-            <div class="about-grid">
-                <div class="about-text">
-                    <p>Our journey began with one question: How can we empower families to navigate the digital age with faith-filled wisdom? In a world captivated by screens, we bridge Scripture and tech.</p>
-                    <p>We teach families not only to use AI and modern tools—but to think critically through a Biblical lens. Every piece of technology, from code to chatbot, can reflect the ultimate Creator.</p>
-                </div>
+            <!-- ...existing code... -->
+<h2 class="section-heading">Who We Are</h2>
+<p class="lead-verse">“He is like a tree planted beside flowing streams that bears its fruit in its season and whose leaf does not wither.” – Psalm 1:3 CSB</p>
+<div class="mv-grid">
+    <div class="mv-item">
+        <span class="mv-label mission-label">Mission</span>
+        <p class="mission-statement">GrowBeyondAI exists to equip children and families to engage technology and AI with biblical wisdom, creative purpose, and a heart for discipleship.</p>
+    </div>
+    <div class="mv-item">
+        <span class="mv-label vision-label">Vision</span>
+        <p class="vision-statement">Raising the next generation of Christ-followers—digitally wise, deeply rooted, and ready to shine.</p>
+    </div>
+</div>
+<!-- ...existing code... -->                </div>
                 <div class="about-image">
                     <img src="images/about_image.jpg" alt="Parents reading with kids">
                 </div>
@@ -117,7 +126,10 @@
             <h2 class="section-heading">Stories of Growth</h2>
             <p class="testimonial">
               “We drew our Tree of Faith together and had our best family devotional ever! Our kids ask for more every morning.”<br>
-              — The Johnson Family
+              — The Lee Family
+            </p>
+            <p class="testimonial">
+              “These devotionals showed us how God’s truth can guide our family—even in a world full of technology.” — The George Family
             </p>
         </div>
     </section>
@@ -126,7 +138,9 @@
         <div class="container cta-content">
             <h2>Ready to Grow Beyond AI?</h2>
             <p>Join us on a journey to a more purposeful and faithful future.</p>
-            <a href="#contact" class="cta-button-alt">Contact Us Today</a>
+           <a href="mailto:growbeyond22@gmail.com?subject=Contact%20Request%20from%20GrowBeyondAI%20Website" class="cta-button-alt">
+    Contact Us Today
+</a>
 
             <div class="newsletter-form">
                 <h3>Subscribe for Weekly Devotionals & AI+Faith Tips</h3>
@@ -158,7 +172,15 @@
           <p>&copy; 2025 GrowBeyondAI. All Rights Reserved.</p>
       </div>
     </footer>
-
+<script>
+document.getElementById('newsletterForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var email = document.getElementById('newsletterEmail').value;
+    var subject = encodeURIComponent('Newsletter Subscription Request');
+    var body = encodeURIComponent('Please subscribe me to the GrowBeyondAI newsletter. My email: ' + email);
+    window.location.href = 'mailto:growbeyond22@gmail.com?subject=' + subject + '&body=' + body;
+});
+</script>
     <script src="script.js"></script>
 </body>
 </html>
